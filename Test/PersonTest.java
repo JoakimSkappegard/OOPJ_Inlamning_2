@@ -20,11 +20,4 @@ class PersonTest {
         assert(testDate.equals(p.getStartArskort()));
         assert(!testDate.equals(p.getStartArskort().plusDays(1)));
     }
-    @Test
-    void testaddTraning() {
-        long persnummer = 0101011111;
-        Person p = new Person(persnummer, "Anna", "Andersson", "2024-01-01");
-
-    }
-
 }

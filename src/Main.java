@@ -17,7 +17,6 @@ public class Main {
 
         if (isTest){
             txtInputt("src/test1.txt");
-
         }
         else{
 
@@ -54,7 +53,7 @@ public class Main {
                     String fNamn;
                     String eNamn;
                     try {
-                        fNamn = eftersoktKund.substring(0, eftersoktKund.indexOf(" ")).trim().toLowerCase();
+                        fNamn = eftersoktKund.substring(0, eftersoktKund.indexOf(" ")).trim().toLowerCase();            //metoden borde göra detta! annars behöver man tänka på det varje gång man matar in något
                         eNamn = eftersoktKund.substring(eftersoktKund.indexOf(" ")).trim().toLowerCase();
 
                     } catch (StringIndexOutOfBoundsException stringIndexOutOfBoundsException) {
@@ -83,8 +82,6 @@ public class Main {
                 if(registreraBesok==0){
                     registreraBesok(kundnummer);
                 }
-
-
             }
         }
     }
@@ -100,6 +97,11 @@ public class Main {
         Main main = new Main(false);
 
     }
+
+
+
+
+
 
     public void txtInputt (String input) {
 
@@ -129,8 +131,6 @@ public class Main {
                 Person kund = new Person(persNummer, fNamn, eNamn, date);
 
                 kunder.add(kund);
-
-
             }
 
 
@@ -156,7 +156,7 @@ public class Main {
 
     public int sok(String fNamn, String eNamn){
         for (int i = 0; i<kunder.size() ; i++) {
-            if(kunder.get(i).getFNamn().toLowerCase().equals(fNamn) && kunder.get(i).getENamn().toLowerCase().equals(eNamn)){
+            if(kunder.get(i).getFNamn().equalsIgnoreCase(fNamn.trim()) && kunder.get(i).getENamn().equalsIgnoreCase(eNamn.trim())){
 
                 return i;
 
@@ -180,8 +180,10 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
-
+    public ArrayList<Person> getKunder() {
+        return kunder;
     }
 
     public Main(){
