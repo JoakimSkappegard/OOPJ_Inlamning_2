@@ -1,0 +1,17 @@
+1 läsa in fil
+    1.1 test läsa fil (testfil)
+2 konstruera objekt från fil data
+    2.1 Testa konstruktor
+2b objekt till lista
+3 hitta kund via personnummer/förnamn efternamn
+    3.1 testa personsökare
+4 logga kund besök till kund besök
+    4.1 testa set/get i person.besöklista lista
+5 spara som fil
+    5.1 testa att fil sparas med korekt info
+
+6 få programet till att skriva ut om medlemskap == giltligt || gammalt || ogiltligt
+7
+
+8 spara som objekt
+9 kunna läsa objekt
